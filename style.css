@@ -1,13 +1,13 @@
 :root {
     --Darkblue: #27353E;
-    --lessDarkBlue: #3c4457;
+    --lessDarkBlue: #3B505D;
     --LightBlue: #486374;
-    --red: #b47d6c;
+    --red: #b66f5a;
     --white: #fff;
     --notSoWhite: #ececec;
     --gray: rgb(196, 194, 194);
     --lightRed: #b4663fb7;
-    --italianGreen: #008844;
+    --orange: #e16540;
     --italianRed: #C72029;
   }
 
@@ -57,7 +57,7 @@ header {
 }
 
 .fixed-navbar {
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8);
 }
 
 .nav-header {
@@ -82,7 +82,7 @@ header {
 }
 
 .links-list a:hover {
-    color: var(--italianGreen);
+    color: var(--orange);
     font-weight: 500;
 }
 
@@ -104,7 +104,7 @@ header {
 .nav-toggle:hover {
     transform: rotate(90deg);
     transition: 0.3s;
-    color: var(--italianGreen);
+    color: var(--orange);
 }
 
 ul {
@@ -136,7 +136,7 @@ li a {
     font-weight: 500;
     cursor: pointer;
     border-style: none;
-    background-color: var(--italianGreen);
+    background-color: var(--orange);
     border-radius: 10px;
     padding: 10px 15px;
 }
@@ -148,16 +148,62 @@ li a {
 /*------- ABOUT-------*/
 
 #about {
-    background-color: var(--Darkblue);
+    background-color: var(--lessDarkBlue);
+    color: var(--notSoWhite);
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.about-content {
+    text-align: center;
+    max-width: 700px;
 }
 
 span {
     color: var(--red);
 }
+
 /*************CONTACT**************/
 
 #contact {
     background-color: var(--notSoWhite);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container {
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+}
+
+.form {
+    padding: 5px;
+    margin: 5px;
+}
+
+input, textarea{
+    padding: 5px;
+    margin: 5px;
+    max-width: 200x;
+    width: 95%;
+    min-width: 50px;
+    border-radius: 7px;
+    border: 1px solid var(--red);
+}
+
+textarea {
+    height: 140px;
+}
+
+.maps-container {
+    border: 1px solid gray;
+    padding: 0;
+    margin: 0;
 }
 
 /************MENU***************/
@@ -192,7 +238,7 @@ hr {
     border-style: none;
     padding: 5px 10px;
     margin: 7px 2px;
-    background-color: var(--italianGreen);
+    background-color: var(--red);
     color: var(--white);
     font-size: 12px;
     cursor: pointer;
@@ -260,7 +306,7 @@ hr {
     bottom: 15px;
     right: 20px;
     color: var(--white);
-    background-color: var(--italianGreen);
+    background-color: var(--orange);
     padding: 5px 10px;
     border-radius: 7px;
     font-size: 16px;
@@ -317,7 +363,7 @@ hr {
         position: fixed;
         top: 0;
         background-color: var(--Darkblue);
-        box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+        box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8);
         transition: 0.3s;
     }
 
@@ -326,9 +372,18 @@ hr {
     }
 
     .fixed-navbar .links-list a:hover {
-        color: var(--italianGreen);
+        color: var(--orange);
     }
    
+    .contact-container {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 10px;
+    }
+
+    .map {
+        margin-right: 60px;
+    }
 }
 
 
@@ -363,6 +418,7 @@ hr {
     .grid-container {
         grid-template-columns: 1fr 1fr;
         grid-gap: 40px;
+        padding-bottom: 50px;
     }
     .thumbnails {
         width: 12rem;
